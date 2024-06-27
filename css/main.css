@@ -387,21 +387,87 @@ button {
 
 .test {
     background-color: #000000;
+    height: 600px;
+    margin-bottom: 0;
 }
 
-.test h2 {
+.jane-d-img {
+    background-image: url(../css/images/testimonial-1.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 306px;
+    height: 400px;
+    margin-right: 20px;
+}
+
+
+.scott-s-img {
+    background-image: url(../css/images/testimonial-2.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 306px;
+    height: 400px;
+    margin-right: 20px;
+}
+
+.susie-f-img{
+    background-image: url(../css/images/testimonial-3.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 306px;
+    height: 400px;
+}
+.jane-d-img .scott-s-img  .susie-f-img::before{
+    content:'';
+    width: 100%;
+    height: 400px;
+    background-color: #000000;
+    position: absolute;
+    position: relative;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.test h2 p {
     color: #ffffff;
     margin-top: 0;
     margin-bottom: 2rem;
     inline-size: 480px;
-    overflow-wrap: break-word;   
+    overflow-wrap: break-word;  
+    z-index: 2; 
+}
+
+.test h3{
+    z-index: 2;
 }
 
 .tree_test {
     display: flex;
-    width: 300px;
+    align-items: center;
 }
- 
+
+.test p {
+    color: #ffffff;
+    inline-size: 3000px;
+    overflow-wrap: break-word;
+    z-index: 2
+    
+}
+
+/* footer */
+footer {
+    background-color: #000000;
+    height: 500px; 
+    margin: 0 auto;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    color: #ffffff; 
+    padding-top: 60px;
+}
+
 
 
 
