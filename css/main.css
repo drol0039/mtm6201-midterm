@@ -1,0 +1,353 @@
+
+/* fonts */
+p button {
+    font-family: Karla;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+ font-style: normal;
+      }
+
+h2, h3, nav {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+p, button { 
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+}
+
+button { 
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 3.815rem;
+}
+
+h2 {
+  font-size: 39px;
+  color: #000000;
+}
+
+h3{
+  font-size: 1.953m;
+  color: #d69e3d;
+}
+
+p {
+  font-size: 1rem;
+}
+/* layout */
+
+
+body {
+  background-color: #f3f0e9 ;
+}
+
+.wrapper {
+  max-width: 1200;
+  margin: 0 auto;
+}
+
+.container {
+  width: 80%; 
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #000000;
+}
+
+.logo {
+  width: 230px;
+}
+
+.menu li {
+  margin-left: 20px;
+  list-style-type: none;
+}
+
+ul li a {
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu li a {
+  transition: .3s;
+}
+
+.menu li a:hover {
+  color: #d69e3d;
+  transition: .3s;
+}
+
+/* main */
+#hero {
+  background-image: url(../css/images/hero-background.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+#hero::before {
+  content:'';
+  width: 100%;
+  height: 610px;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: 1;
+  margin-top: 80px;
+}
+
+.hero_text {
+  z-index: 2;
+  color: #ffffff;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  justify-content: center;
+}
+
+button {
+  background-color: #ffffff; 
+  border: none;
+  color: #000000;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* welcome */
+.welcome {
+  margin-top: 5rem;
+}
+
+.welcome h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.welcome h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  inline-size: 480px;
+  overflow-wrap: break-word;
+
+}
+
+.five_images {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ grid-template-rows: repeat(2, 1fr);
+ width: 960px;
+}
+
+.latte {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  width: 470px;
+  height: 470px;
+  margin-right: 20px;
+}
+
+.beans {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+  width: 225px;
+  height: 225px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.pouring {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 1;
+  width: 225px;
+  height: 225px;
+  margin-bottom: 20px;
+}
+
+.cups {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+  width: 225px;
+  height: 225px;
+  margin-right: 20px;
+}
+
+.smiling {
+  grid-column: 4 / span 1;
+  grid-row: 2 / span 1;
+  width: 225px;
+  height: 225px;
+}
+
+/* why visit us */
+.why  h3 {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.why h2 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.trade img, .local img, .love img {
+   width: 60%;
+   display: grid;
+   text-align: center;
+   margin-left: 3rem;
+}
+
+.why_three h3 {
+  color: #000000;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.why_three p {
+  inline-size: 260px;
+  overflow-wrap: break-word;
+}
+
+.why_three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px;
+  margin-bottom: 40px;
+  width:960px;
+  text-align: center;
+}
+
+.trade {
+  grid-column: 1 / span 1;
+  /*margin-left: 40px;*/
+
+}
+
+.local {
+  grid-column: 2 / span 1;
+  /*margin-left: 40px;*/
+  
+}
+
+.love {
+  grid-column: 3 / span 1;
+  /*margin-left: 40px;*/
+  text-align: center;
+}
+
+/* our menu */
+.explore {
+  background-image: url(../css/images/coffee-shop.jpeg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.explore::before {
+  content:'';
+  width: 100%;
+  height: 370px;
+  background-color: #000000;
+  position: absolute;
+  /*top: 0;*/
+  left: 0;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.menu {
+  width: 48%;
+  z-index: 2;
+  
+}
+
+.location {
+  width: 48%;
+  z-index: 2;
+}
+
+.explore h2 {
+  color: #ffffff;
+}
+
+.explore h3 {
+  margin-top: 20px;
+  margin-bottom: 0;
+
+}
+
+.menu button {
+  background-color: #ffffff; 
+  border: none;
+  color: #000000;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.menu button:hover {
+  background: none;
+  color: #d69e3d;
+  border: 1px solid #ffffff;
+}
+
+
+ .location button {
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.location button:hover {
+  background-color: #d69e3d;
+  color: white;
+}
+
