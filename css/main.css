@@ -62,14 +62,12 @@ body {
   width: 80%; 
   max-width: 960px;
   margin: auto;
-  position: relative;
 
 }
 
 .flex {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -78,28 +76,33 @@ header {
   width: 100%;
   height: 80px;
   background-color: #000000;
+  padding: 20px 0;
 }
 
 .logo {
   width: 230px;
 }
 
-.menu li {
-  margin-left: 20px;
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin-left: 10px;
   list-style-type: none;
+  margin-left: 20px;
 }
 
-ul li a {
+header ul li a {
   font-size: 18px;
   color: #ffffff;
   text-decoration: none;
 }
 
-.menu li a {
+header ul li a {
   transition: .3s;
 }
 
-.menu li a:hover {
+header ul li a:hover {
   color: #d69e3d;
   transition: .3s;
 }
@@ -132,6 +135,8 @@ ul li a {
   margin-right: 20%;
   text-align: center;
   justify-content: center;
+  width: 700px;
+  flex-wrap: wrap;
 }
 
 button {
@@ -234,11 +239,13 @@ button {
   font-weight: 600;
   margin-top: 1rem;
   text-align: center;
+  justify-content: center;
 }
 
 .why_three p {
   inline-size: 260px;
   overflow-wrap: break-word;
+  justify-content: center;
 }
 
 .why_three {
@@ -262,10 +269,21 @@ button {
   
 }
 
+.local h3 {
+  transform: translateX(-10%);
+}
 .love {
   grid-column: 3 / span 1;
   /*margin-left: 40px;*/
   text-align: center;
+}
+
+.love h3 {
+  transform: translateX(-10%);
+}
+
+.love {
+  transform: translateY(-2%);
 }
 
 /* our menu */
@@ -288,19 +306,23 @@ button {
   position: absolute;
   /*top: 0;*/
   left: 0;
-  opacity: 0.5;
+  opacity: 0.6;
   z-index: 1;
 }
 
 .menu {
   width: 48%;
   z-index: 2;
+  align-items: center;
+  position: relative;
   
 }
 
 .location {
   width: 48%;
   z-index: 2;
+  align-items: center;
+  position: relative;
 }
 
 .explore h2 {
@@ -318,10 +340,11 @@ button {
   border: none;
   color: #000000;
   padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  position: absolute;
+  transform: translateX(70%);
 }
 
 .menu button:hover {
@@ -337,10 +360,11 @@ button {
   border: 1px solid #ffffff;
   color: #ffffff;
   padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  position: absolute;
+  transform: translateX(70%);
 }
 
 .location button:hover {
@@ -364,9 +388,14 @@ button {
     width: 48%;
     margin-top: 0;
     margin-bottom: 2rem;
-    /*inline-size: 480px;
-    margin-right: auto;*/
+    /*flex-wrap: wrap;
+    float: left;*/
+  
   }
+   .about_text h2 {
+    padding-bottom: 16px;
+   }
+ 
 
   .about_text button {
     background-color: #000000; 
@@ -391,21 +420,23 @@ button {
     margin-bottom: 0;
 }
 
-.jane-d-img {
-    background-image: url(../css/images/testimonial-1.jpeg);
-    background-position: center;
-    background-size: cover;
-    width: 306px;
-    height: 400px;
-    margin-right: 20px;
+.tree_test {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
 }
 
+.tree_test .col {
+  width: 31%;
+  height: 450px;
+  position: relative;
+}
 
 .scott-s-img {
     background-image: url(../css/images/testimonial-2.jpeg);
     background-position: center;
     background-size: cover;
-    width: 306px;
+    width: 30%;
     height: 400px;
     margin-right: 20px;
 }
@@ -414,7 +445,7 @@ button {
     background-image: url(../css/images/testimonial-3.jpeg);
     background-position: center;
     background-size: cover;
-    width: 306px;
+    width: 30%
     height: 400px;
 }
 .jane-d-img .scott-s-img  .susie-f-img::before{
@@ -427,7 +458,7 @@ button {
     opacity: 0.3;
     z-index: 1;
 }
-
+*/
 .test h2 p {
     color: #ffffff;
     margin-top: 0;
@@ -435,10 +466,6 @@ button {
     inline-size: 480px;
     overflow-wrap: break-word;  
     z-index: 2; 
-}
-
-.test h3{
-    z-index: 2;
 }
 
 .tree_test {
@@ -461,11 +488,18 @@ footer {
     margin: 0 auto;
 }
 
+footer .container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1280px;
+  border-top: solid 1px #ffffff78;
+}
+
 footer p {
     display: flex;
     justify-content: center;
     color: #ffffff; 
-    padding-top: 60px;
+    padding-top: 0;
 }
 
 
