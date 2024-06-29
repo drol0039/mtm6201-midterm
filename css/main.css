@@ -29,10 +29,6 @@ button {
   font-style: italic;
 }
 
-h1 {
-  font-size: 3.815rem;
-}
-
 h2 {
   font-size: 39px;
   color: #000000;
@@ -54,19 +50,18 @@ body {
 
 .container {
   width: 94%;
+  max-width: 480px;
   margin: auto;
 }
 .flex {
   flex-wrap: wrap;
 }
-
-
-@media screen and (min-width: 1100px) {
 .wrapper {
   max-width: 1200;
   margin: 0 0;
 }
 
+@media screen and (min-width: 1100px) {
 .container {
   width: 80%; 
   max-width: 960px;
@@ -87,14 +82,11 @@ header {
   background-color: #000000;
   padding: 20px 0;
   display: block;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  margin: auto;
   
 }
 .logo {
   width: 200px;
-  margin: auto;
 }
 header nav ul {
   display: flex;
@@ -116,7 +108,7 @@ header ul li a {
 @media screen and (min-width: 1100px) {
 header {
   width: 100%;
-  height: 80px;
+  height: 60px;
   background-color: #000000;
   padding: 20px 0;
 }
@@ -151,6 +143,57 @@ header ul li a:hover {
 
 
 /* main */
+.main h1 {
+    font-size: 2.027rem;
+    font-weight: 900;
+  }
+
+  #hero {
+    background-image: url(../css/images/hero-background.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+  }
+
+  #hero::before {
+    content:'';
+    width: 100%;
+    height: 300px;
+    background-color: #000000;
+    position: absolute;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  .hero_text {
+    z-index: 2;
+    color: #ffffff;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    justify-content: center;
+    width: 350px;
+    flex-wrap: wrap;
+  }
+  button {
+    background-color: #ffffff; 
+    border: none;
+    color: #000000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    color: #d69e3d;
+    transition: .3s;
+  }
+
 @media screen and (min-width: 1100px) {
 main h1 {
   font-size: 3.815rem;
