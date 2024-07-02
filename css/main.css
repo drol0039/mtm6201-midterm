@@ -1,48 +1,64 @@
 
-/* fonts */
+/* fonts for all size */
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+/* for al size  */
 p button {
-    font-family: Karla;
+    font-family: "Karla", sans-serif;
 }
 
 h1 {
   font-family: "Lato", sans-serif;
-  font-style: normal;
       }
 
 h2, h3, nav {
         font-family: "Lato", sans-serif;
-        font-weight: 400;
-        font-style: normal;
       }
       
 p, button { 
   font-family: "Karla", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: italic;
 }
 
 button { 
   font-family: "Karla", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: italic;
 }
 
 h2 {
-  font-size: 39px;
+  font-size: 1.802rem;
   color: #000000;
 }
 
 h3{
-  font-size: 1.953m;
+  font-size: 1.424rem;
   color: #d69e3d;
 }
 
 p {
   font-size: 1rem;
 }
-/* layout */
+/* layout for all size */
 
 body {
   background-color: #f3f0e9 ;
@@ -50,15 +66,13 @@ body {
 
 .container {
   width: 94%;
-  max-width: 480px;
+  /*max-width: 480px;*/
   margin: auto;
 }
-.flex {
-  flex-wrap: wrap;
-}
+
 .wrapper {
   max-width: 1200;
-  margin: 0 0;
+  /* margin: auto; */
 }
 
 @media screen and (min-width: 1100px) {
@@ -69,29 +83,30 @@ body {
 }
 }
 
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 /* header */
 header {
   width: 100%;
   height: 140px;
   background-color: #000000;
   padding: 20px 0;
-  display: block;
   margin: auto;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*padding: 0 4%;*/
+
 }
+
 .logo {
   width: 200px;
+  /*display: flex;
+  justify-content: center;*/
 }
 header nav ul {
   display: flex;
-  justify-content: center;
+  align-items: center;
   margin: 40px 0;
+
 }
 header nav ul li { 
   margin-left: 10px;
@@ -100,7 +115,7 @@ header nav ul li {
 
 header ul li a {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 900;
   color: #ffffff;
   text-decoration: none;
 }
@@ -111,6 +126,7 @@ header {
   height: 60px;
   background-color: #000000;
   padding: 20px 0;
+  display: flex;
 }
 
 .logo {
@@ -143,7 +159,11 @@ header ul li a:hover {
 
 
 /* main */
-.main h1 {
+main {
+  flex-wrap: wrap;
+}
+
+.hero_text h1 {
     font-size: 2.027rem;
     font-weight: 900;
   }
@@ -153,7 +173,7 @@ header ul li a:hover {
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 300px;
+    height: 460px;
     display: flex;
     align-items: center;
   }
@@ -161,7 +181,7 @@ header ul li a:hover {
   #hero::before {
     content:'';
     width: 100%;
-    height: 300px;
+    height: 460px;
     background-color: #000000;
     position: absolute;
     opacity: 0.5;
@@ -186,6 +206,7 @@ header ul li a:hover {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    font-weight: 900;
     margin-top: 20px;
   }
 
@@ -242,7 +263,69 @@ button {
   margin-top: 20px;
 }
 }
-/* welcome */
+/* welcome to my coffee */
+
+.welcome {
+  margin-top: 5rem;
+}
+.welcome h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.welcome h2 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+  inline-size: 480px;
+  overflow-wrap: break-word;
+}
+.five_images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  max-width: 100%;
+  gap: 10px;
+ }
+
+ .latte {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  width: 100%;
+  height: 100%;
+}
+
+.beans {
+  grid-column: 1 / span 1;
+  grid-row: 3/ span 1;
+  width: 100%;
+  height: 100%;
+  margin-right: 10x;
+  margin-bottom: 10px;
+}
+
+.pouring {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.cups {
+  grid-column: 1/ span 1;
+  grid-row: 4/ span 1;
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.smiling {
+  grid-column: 2/ span 1;
+  grid-row: 4 / span 1;
+  width: 100%;
+  height: 100%;
+}
+
+
 @media screen and (min-width: 1100px) {
 .welcome {
   margin-top: 5rem;
@@ -310,6 +393,51 @@ button {
 }
 
 /* why visit us */
+.why  h3 {
+  text-align: center;
+  margin-top: 4rem;
+}
+.why h2 {
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.why_three {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.trade {
+  margin-bottom: 60px;
+}
+
+.local {
+  margin-bottom: 60px;
+}
+
+.love {
+  margin-bottom: 60px;
+}
+
+.why_three h3 {
+  color: #000000;
+  margin-top: 1rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.why_three p {
+  inline-size: 260px;
+  overflow-wrap: break-word;
+  justify-content: center;
+}
+
+.trade img, .local img, .love img {
+   width: 7rem;
+}
+
 @media screen and (min-width: 1100px) {
 .why  h3 {
   text-align: center;
@@ -380,7 +508,93 @@ button {
   transform: translateY(-2%);
 }
 }
-/* our menu */
+
+
+/* explpre */
+.explore {
+  background-image: url(../css/images/coffee-shop.jpeg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore::before {
+  content:'';
+  width: 100%;
+  height: 520px;
+  background-color: #000000;
+  position: absolute;
+  left: 0;
+  opacity: 0.6;
+  z-index: 1;
+}
+.explore h2 {
+  color: #ffffff;
+}
+
+.menu {
+  z-index: 2;
+  align-items: center;
+  position: relative; 
+}
+
+.menu h3 {
+  margin-top: 0;
+}
+
+.menu button {
+  background-color: #ffffff; 
+  border: none;
+  color: #000000;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  transform: translateX(30%);
+  margin-top: 0;
+}
+
+.menu button:hover {
+  background: none;
+  color: #d69e3d;
+  border: 1px solid #ffffff;
+  transition: .3s;
+}
+
+.location {
+  z-index: 2;
+  align-items: center;
+  position: relative;
+}
+.location h3 {
+  margin-top: 120px;
+}
+
+ .location button {
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  transform: translateX(40%);
+  margin-top: 0;
+}
+
+.location button:hover {
+  background-color: #d69e3d;
+  color: white;
+  transition: .3s;
+}
+
 @media screen and (min-width: 1100px) {
 .explore {
   background-image: url(../css/images/coffee-shop.jpeg);
@@ -389,7 +603,6 @@ button {
   width: 100%;
   height: 370px;
   display: flex;
-  align-items: center;
   margin-bottom: 120px;
 }
 
@@ -468,7 +681,49 @@ button {
   transition: .3s;
 }
 }
-/* about */
+
+
+/* about us */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.about_img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .about_text {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  
+ 
+
+  .about_text button {
+    background-color: #000000; 
+    border: none;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .about_text button:hover {
+    color: #d69e3d;
+    transition: .3s;
+  }
+
 @media screen and (min-width: 1100px) {
 .about {
   margin-top: 30px;
@@ -489,9 +744,6 @@ button {
     width: 48%;
     margin-top: 0;
     margin-bottom: 2rem;
-    /*flex-wrap: wrap;
-    float: left;*/
-  
   }
    .about_text h2 {
     padding-bottom: 16px;
@@ -514,7 +766,60 @@ button {
     transition: .3s;
   }
 }
+
+
 /*TESTIMONIALS */
+.test {
+  background-color: #000000;
+  height: 1600px;
+}
+.test .container {
+padding-top: 40px;
+}
+.test .container h2{
+  color: #ffffff;
+  font-weight: 500;
+  text-align: left;
+}
+.test .container h3 {
+  text-align: left;
+}
+.tree_test {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tree_test .col {
+  width: 100%;
+  position: relative;
+}
+.tree_test .cover {
+  background-color: #000000;
+  width: 100%;
+  height: 1400px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.tree_test .col img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.tree_test .col p{
+  color: #ffffff;
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-210%);
+}
+.tree_test .col h3 {
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-400%);
+}
+
 @media screen and (min-width: 1100px) {
 .test {
     background-color: #000000;
@@ -568,10 +873,11 @@ button {
   z-index: 2;
 }
 }
+
 /* footer */
 footer {
     background-color: #000000;
-    height: 500px; 
+    height: 200px; 
     margin: 0 auto;
 }
 
