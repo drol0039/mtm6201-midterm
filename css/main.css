@@ -431,7 +431,7 @@ button {
 @media screen and (min-width: 1100px) {
 
 .trade img, .local img, .love img {
-   width: 60%;
+   width: 50%;
    display: grid;
    text-align: center;
    margin-left: 3rem;
@@ -457,8 +457,9 @@ button {
   margin-top: 30px;
   margin-bottom: 40px;
   width:960px;
-  text-align: center;
+  place-content: center;
 }
+
 
 .trade {
   grid-column: 1 / span 1;
@@ -468,6 +469,7 @@ button {
 
 .local {
   grid-column: 2 / span 1;
+  transform: translateY(-4%);
   /*margin-left: 40px;*/
   
 }
@@ -608,6 +610,7 @@ flex-direction: column;
 .explore .container {
   display: flex;
   flex-direction: row;
+  width: 60%;
   justify-content: space-between;
   align-items: center;
 }
@@ -647,7 +650,7 @@ flex-direction: column;
   display: inline-block;
   font-size: 16px;
   position: absolute; */
-  transform: translateX(60%);
+  transform: translateX(50%);
 } 
 
 /* .menu button:hover {
@@ -666,7 +669,7 @@ flex-direction: column;
   display: inline-block;
   font-size: 16px;
   position: absolute; */
-  transform: translateX(60%); 
+  transform: translateX(50%); 
 } 
 
 /* .location button:hover {
